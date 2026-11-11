@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflip - Security Lab</title>
+
+<style>
+body {
+    background: #101522;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login-box {
+    background: #202a3d;
+    padding: 35px;
+    width: 320px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 35px #0008;
+}
+
+h1 {
+    color: #ff704d;
+    font-size: 38px;
+}
+
+input {
+    width: 90%;
+    padding: 13px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 95%;
+    padding: 13px;
+    background: #ff704d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #e64d35;
+}
+
+#message {
+    margin-top: 18px;
+    color: #8df0a5;
+}
+
+.notice {
+    color: #aab4c7;
+    font-size: 12px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>NETFLIP</h1>
+
+<h3>Security Awareness Lab</h3>
+
+<p>Fictional login demonstration</p>
+
+<form id="loginForm">
+
+<input
+type="text"
+id="username"
+placeholder="Demo username"
+required
+>
+
+<input
+type="password"
+id="password"
+placeholder="Dummy password"
+required
+>
+
+<button type="submit">Test Login</button>
+
+</form>
+
+<p id="message"></p>
+
+<p class="notice">
+SOC Training Simulation<br>
+No credentials are stored or transmitted.
+</p>
+
+</div>
+
+<script>
+
+document.getElementById("loginForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    document.getElementById("message").innerText =
+    "Simulation completed successfully!";
+
+    document.getElementById("password").value = "";
+setTimeout(function() {
+    window.location.href = "https://www.google.com";
+}, 2000);
+
+});
+
+</script>
+
+</body>
+</html>
